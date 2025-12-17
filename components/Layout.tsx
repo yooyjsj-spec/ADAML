@@ -1,16 +1,14 @@
 import React from 'react';
 import { Outlet } from 'react-router-dom';
 import Navbar from './Navbar';
-import UnicornBackground from './UnicornBackground';
 
 const Layout: React.FC = () => {
   return (
-    <div className="relative min-h-screen font-sans text-slate-300 flex flex-col">
-      <UnicornBackground />
+    <div className="relative min-h-screen font-sans text-slate-300 flex flex-col bg-slate-950">
       <Navbar />
       
       {/* Main Content Area */}
-      <main className="flex-grow">
+      <main className="flex-grow relative z-10">
         <Outlet />
       </main>
 

@@ -37,18 +37,6 @@
       ::-webkit-scrollbar-thumb:hover {
         background: #475569;
       }
-      
-      /* Ensure Unicorn Studio background covers everything */
-      #unicorn-background {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100vw;
-        height: 100vh;
-        z-index: -1;
-        pointer-events: none;
-        overflow: hidden;
-      }
     </style>
   <script type="importmap">
 {
@@ -64,48 +52,5 @@
 </head>
   <body class="bg-slate-950 text-slate-200 antialiased overflow-x-hidden selection:bg-primary selection:text-white">
     <div id="root"></div>
-    <!-- ✅ React UMD (import 없이 전역 React/ReactDOM 사용) -->
-<script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
-<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
-
-<script>
-  const e = React.createElement;
-
-  function App() {
-    return e(
-      "main",
-      { className: "min-h-screen flex items-center justify-center p-10" },
-      e("div", { className: "max-w-2xl" }, [
-        e("h1", { className: "text-4xl font-bold text-white" }, "ADAM Lab"),
-        e(
-          "p",
-          { className: "mt-4 text-white/70 text-lg" },
-          "이 문장이 보이면 렌더링 성공 ✅ (이제 섹션 붙이면 됨)"
-        ),
-      ])
-    );
-  }
-
-  ReactDOM.createRoot(document.getElementById("root")).render(e(App));
-</script>
-    
-    <!-- Unicorn Studio Script -->
-    <script type="text/javascript">
-      // This is the user-provided script logic, slightly adapted to ensure global access if needed
-      (function(){
-        if(!window.UnicornStudio){
-          window.UnicornStudio={isInitialized:!1};
-          var i=document.createElement("script");
-          i.src="https://cdn.jsdelivr.net/gh/hiunicornstudio/unicornstudio.js@v1.5.3/dist/unicornStudio.umd.js";
-          i.onload=function(){
-            if(!window.UnicornStudio.isInitialized){
-              UnicornStudio.init();
-              window.UnicornStudio.isInitialized=!0;
-            }
-          };
-          (document.head || document.body).appendChild(i);
-        }
-      })();
-    </script>
-     </body>
+  </body>
 </html>
