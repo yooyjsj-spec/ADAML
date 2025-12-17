@@ -31,7 +31,7 @@ const Home: React.FC = () => {
     if (videoRef.current) {
       videoRef.current.muted = true;
       videoRef.current.play().catch(e => {
-        console.warn("Video play failed - retrying with fallback if needed:", e);
+        console.warn("Video auto-play blocked or failed, but error is handled.");
       });
     }
   };
@@ -108,7 +108,7 @@ const Home: React.FC = () => {
                playsInline
                onError={(e) => {
                  const video = e.target as HTMLVideoElement;
-                 if (video.src.includes('lab_video.mp4')) {
+                 if (!video.src.includes('mixkit')) {
                     video.src = "https://assets.mixkit.co/videos/preview/mixkit-abstract-technology-interface-background-34676-large.mp4";
                  }
                }}
