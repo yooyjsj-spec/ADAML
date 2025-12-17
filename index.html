@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ADAM LAB | AI Analysis & Defense Aerospace Materials</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Babel Standalone for TSX support on GitHub Pages -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     <script>
       tailwind.config = {
         theme: {
@@ -44,7 +46,7 @@
   </head>
   <body class="text-slate-200 antialiased overflow-x-hidden selection:bg-primary selection:text-white">
     <div id="root"></div>
-    <!-- 앱의 시작점인 index.tsx를 로드합니다. -->
-    <script type="module" src="./index.tsx"></script>
+    <!-- Load index.tsx as a Babel script to enable JSX/TSX on static hosts -->
+    <script type="text/babel" data-type="module" src="./index.tsx"></script>
   </body>
 </html>

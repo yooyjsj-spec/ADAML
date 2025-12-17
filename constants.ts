@@ -279,10 +279,10 @@ export const JOURNALS: Publication[] = [
   },
   {
     id: "j12",
-    title: "Advanced AI techniques for predicting fatigue life in aerospace alloys",
+    title: "AI-powered characterization of additive manufactured components for aerospace",
     link: "#",
     image: "./image/journal/journal117.png",
-    venue: "Aerospace Science and Technology",
+    venue: "Advanced Materials & Processes",
     year: 2023
   }
 ];
@@ -311,7 +311,7 @@ export const NEWS: NewsItem[] = [
 export const GALLERY: GalleryItem[] = [
   {
     id: 'g1',
-    title: 'ADAM LAB Opening',
+    title: 'ADAM LAB Opening Ceremony',
     image: 'https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&q=80&w=800',
     date: '2024-03-01',
     description: 'Official opening ceremony of ADAM Lab at Kookmin University.'
