@@ -40,7 +40,7 @@ const Navbar: React.FC = () => {
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
-        {/* Logo */}
+        {/* Logo - Path changed to relative ./logo.png */}
         <button 
           onClick={handleLogoClick} 
           className="flex items-center focus:outline-none transition-opacity hover:opacity-90"
@@ -48,7 +48,7 @@ const Navbar: React.FC = () => {
         >
           <div className="bg-white/90 rounded px-3 py-1.5 shadow-[0_0_15px_rgba(59,130,246,0.3)]">
             <img 
-              src="/logo.png" 
+              src="./logo.png" 
               alt="ADAM LAB Logo" 
               className="h-9 md:h-11 w-auto object-contain" 
             />

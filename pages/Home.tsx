@@ -29,7 +29,10 @@ const Home: React.FC = () => {
 
   const handleMouseEnter = () => {
     if (videoRef.current) {
-      videoRef.current.play().catch(e => console.error("Video play failed:", e));
+      videoRef.current.muted = true;
+      videoRef.current.play().catch(e => {
+        console.warn("Video play failed - retrying with fallback if needed:", e);
+      });
     }
   };
 
@@ -42,7 +45,10 @@ const Home: React.FC = () => {
   return (
     <div>
       {/* Hero Section */}
-      <section id="home" className="relative h-screen flex flex-col justify-center items-center text-center px-4">
+      <section id="home" className="relative h-screen flex flex-col justify-center items-center text-center px-4 overflow-hidden">
+        {/* Subtle background glow */}
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-blue-600/10 blur-[150px] rounded-full pointer-events-none"></div>
+
         <div className="space-y-6 max-w-4xl z-10 animate-fade-in-up">
           <div className="inline-block px-3 py-1 border border-blue-500/30 rounded-full bg-blue-500/10 backdrop-blur-sm mb-4">
             <span className="text-blue-400 text-sm font-bold tracking-widest uppercase">Innovating the Future</span>
@@ -72,10 +78,8 @@ const Home: React.FC = () => {
       {/* About Section */}
       <SectionWrapper id="about-content" title="About The Lab" subtitle="Who We Are">
         <div className="relative grid md:grid-cols-2 gap-12 items-center p-8 md:p-12 rounded-3xl border border-white/10 shadow-2xl overflow-hidden">
-          {/* Metallic Background Layers */}
-          <div className="absolute inset-0 bg-gradient-to-br from-slate-800/60 via-slate-950/80 to-black z-0"></div>
-          <div className="absolute inset-0 bg-gradient-to-tr from-white/5 via-transparent to-transparent opacity-40 z-0 pointer-events-none"></div>
-
+          <div className="absolute inset-0 bg-gradient-to-br from-slate-900/60 via-slate-950/80 to-black z-0"></div>
+          
           <div className="space-y-6 relative z-10">
             <p className="text-lg leading-relaxed text-slate-300">
               {LAB_INFO.about}
@@ -88,19 +92,26 @@ const Home: React.FC = () => {
               ))}
             </div>
           </div>
-          <div className="relative h-64 md:h-80 w-full rounded-2xl overflow-hidden shadow-2xl border border-white/10 group z-10 bg-black cursor-pointer">
-             {/* Note: User needs to upload 'lab_video.mp4' to public/video/ folder. 
-                 Using a turbine engine image as a poster/placeholder until the video is available. */}
+          
+          <div 
+            className="relative h-64 md:h-80 w-full rounded-2xl overflow-hidden shadow-2xl border border-white/10 group z-10 bg-black cursor-pointer"
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}
+          >
              <video 
                ref={videoRef}
-               src="/video/lab_video.mp4" 
-               poster="https://images.unsplash.com/photo-1569629743817-70d8db6c323b?q=80&w=1200&auto=format&fit=crop"
+               src="./video/lab_video.mp4" 
+               poster="https://images.unsplash.com/photo-1569629743817-70d8db6c323b?q=80&w=1200"
                className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-80 group-hover:opacity-100"
                loop
                muted
                playsInline
-               onMouseEnter={handleMouseEnter}
-               onMouseLeave={handleMouseLeave}
+               onError={(e) => {
+                 const video = e.target as HTMLVideoElement;
+                 if (video.src.includes('lab_video.mp4')) {
+                    video.src = "https://assets.mixkit.co/videos/preview/mixkit-abstract-technology-interface-background-34676-large.mp4";
+                 }
+               }}
              />
              <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent opacity-60 pointer-events-none"></div>
              <div className="absolute bottom-6 left-6 pointer-events-none z-20">
