@@ -64,26 +64,7 @@
 </head>
   <body class="bg-slate-950 text-slate-200 antialiased overflow-x-hidden selection:bg-primary selection:text-white">
     <div id="root"></div>
-    
-    <!-- Unicorn Studio Script -->
-    <script type="text/javascript">
-      // This is the user-provided script logic, slightly adapted to ensure global access if needed
-      (function(){
-        if(!window.UnicornStudio){
-          window.UnicornStudio={isInitialized:!1};
-          var i=document.createElement("script");
-          i.src="https://cdn.jsdelivr.net/gh/hiunicornstudio/unicornstudio.js@v1.5.3/dist/unicornStudio.umd.js";
-          i.onload=function(){
-            if(!window.UnicornStudio.isInitialized){
-              UnicornStudio.init();
-              window.UnicornStudio.isInitialized=!0;
-            }
-          };
-          (document.head || document.body).appendChild(i);
-        }
-      })();
-    </script>
-    <script type="module">
+     <script type="module">
   import React from "react";
   import { createRoot } from "react-dom/client";
 
@@ -104,6 +85,24 @@
 
   createRoot(document.getElementById("root")).render(React.createElement(App));
 </script>
-
-  </body>
+    
+    <!-- Unicorn Studio Script -->
+    <script type="text/javascript">
+      // This is the user-provided script logic, slightly adapted to ensure global access if needed
+      (function(){
+        if(!window.UnicornStudio){
+          window.UnicornStudio={isInitialized:!1};
+          var i=document.createElement("script");
+          i.src="https://cdn.jsdelivr.net/gh/hiunicornstudio/unicornstudio.js@v1.5.3/dist/unicornStudio.umd.js";
+          i.onload=function(){
+            if(!window.UnicornStudio.isInitialized){
+              UnicornStudio.init();
+              window.UnicornStudio.isInitialized=!0;
+            }
+          };
+          (document.head || document.body).appendChild(i);
+        }
+      })();
+    </script>
+     </body>
 </html>
