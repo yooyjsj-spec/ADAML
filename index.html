@@ -83,5 +83,27 @@
         }
       })();
     </script>
+    <script type="module">
+  import React from "react";
+  import { createRoot } from "react-dom/client";
+
+  function App() {
+    return React.createElement(
+      "main",
+      { className: "min-h-screen flex items-center justify-center p-10" },
+      React.createElement("div", { className: "max-w-2xl" }, [
+        React.createElement("h1", { className: "text-4xl font-bold text-white" }, "ADAM Lab"),
+        React.createElement(
+          "p",
+          { className: "mt-4 text-white/70 text-lg" },
+          "이 화면이 보이면 React 렌더링이 정상 동작한 거야 ✅"
+        ),
+      ])
+    );
+  }
+
+  createRoot(document.getElementById("root")).render(React.createElement(App));
+</script>
+
   </body>
 </html>
