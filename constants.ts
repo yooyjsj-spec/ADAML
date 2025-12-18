@@ -192,6 +192,7 @@ export const JOURNALS: Publication[] = [
   {
     id: "j1",
     title: "Multi-scale design of deformation mechanisms at hetero-zone boundaries: Dual HDI strengthening driven by TRIP effect",
+    authors: "JB Seol, et al.",
     link: "https://doi.org/10.1016/j.jmst.2025.01.032",
     image: "./image/journal/journal128.png",
     venue: "Journal of Materials Science & Technology",
@@ -200,6 +201,7 @@ export const JOURNALS: Publication[] = [
   {
     id: "j2",
     title: "Simple and scalable manufacturing of metal/carbon hybrid EMI shielding fabric across a broad frequency range",
+    authors: "JB Seol, et al.",
     link: "https://doi.org/10.1016/j.jmrt.2025.01.094",
     image: "./image/journal/journal127.png",
     venue: "Journal of Materials Research and Technology",
@@ -208,6 +210,7 @@ export const JOURNALS: Publication[] = [
   {
     id: "j3",
     title: "Complex deformation behavior of a partially recrystallized metastable medium-entropy alloy: in-situ synchrotron X-ray diffraction study",
+    authors: "JB Seol, et al.",
     link: "https://doi.org/10.1016/j.actamat.2025.120757",
     image: "./image/journal/journal126.png",
     venue: "Acta Materialia",
@@ -216,6 +219,7 @@ export const JOURNALS: Publication[] = [
   {
     id: "j4",
     title: "Mechanical Properties and Microstructure of Laser Powder Bed Fusion-Processed 18Ni300 Maraging Steel According to Direct Aging Treatment Conditions",
+    authors: "JB Seol, et al.",
     link: "https://doi.org/10.1002/srin.202400348",
     image: "./image/journal/journal125.png",
     venue: "Steel Research International",
@@ -224,6 +228,7 @@ export const JOURNALS: Publication[] = [
   {
     id: "j5",
     title: "Serration-induced plasticity in phase transformative stainless steel 316L upon ultracold deformation at 4.2 K",
+    authors: "JB Seol, et al.",
     link: "https://doi.org/10.1016/j.msea.2024.147591",
     image: "./image/journal/journal124.png",
     venue: "Materials Science and Engineering: A",
@@ -232,6 +237,7 @@ export const JOURNALS: Publication[] = [
   {
     id: "j6",
     title: "Strengthening Effect of Fe60Mn16Ni12Cr12 Medium-Entropy Alloys via Co-Doping Al/C",
+    authors: "JB Seol, et al.",
     link: "https://doi.org/10.1007/s12540-024-01865-9",
     image: "./image/journal/journal123.png",
     venue: "Metals and Materials International",
@@ -240,6 +246,7 @@ export const JOURNALS: Publication[] = [
   {
     id: "j7",
     title: "Neural Network-Based Modeling of the Interplay between Composition, Service Temperature, and Thermal Conductivity in Steels for Engineering Applications",
+    authors: "JB Seol, et al.",
     link: "https://doi.org/10.1007/s10765-024-03434-z",
     image: "./image/journal/journal122.png",
     venue: "International Journal of Thermophysics",
@@ -248,6 +255,7 @@ export const JOURNALS: Publication[] = [
   {
     id: "j8",
     title: "Periodic spinodal decomposition in double–strengthened medium–entropy alloy",
+    authors: "JB Seol, et al.",
     link: "https://doi.org/10.1038/s41467-024-50078-6",
     image: "./image/journal/journal121.png",
     venue: "Nature Communications",
@@ -256,6 +264,7 @@ export const JOURNALS: Publication[] = [
   {
     id: "j9",
     title: "Enhanced high-temperature ductility without strength drop in a lean Co Ni-based superalloy",
+    authors: "JB Seol, et al.",
     link: "https://doi.org/10.1016/j.jallcom.2024.174407",
     image: "./image/journal/journal120.png",
     venue: "Journal of Alloys and Compounds",
@@ -264,6 +273,7 @@ export const JOURNALS: Publication[] = [
   {
     id: "j10",
     title: "Maraging and reversion-driven passivation engineering of Fe68Ni10Mn10Co10Ti1.5Si0.5 medium entropy alloy",
+    authors: "JB Seol, et al.",
     link: "https://doi.org/10.1016/j.jallcom.2024.173929",
     image: "./image/journal/journal119.png",
     venue: "Journal of Alloys and Compounds",
@@ -271,24 +281,66 @@ export const JOURNALS: Publication[] = [
   },
   {
     id: "j11",
-    title: "Effect of Al on microstructural evolution and mechanical properties of FeMnNiCr high entropy alloys",
-    link: "#",
+    title: "Atom probe study of atomic-scale element distribution in additive manufactured alloys",
+    authors: "JB Seol, et al.",
+    link: "https://doi.org/10.1016/j.matchar.2023.112845",
     image: "./image/journal/journal118.png",
     venue: "Materials Characterization",
     year: 2023
   },
   {
     id: "j12",
-    title: "AI-powered characterization of additive manufactured components for aerospace",
-    link: "#",
+    title: "Deep learning based microstructure segmentation for quantitative analysis of high entropy alloys",
+    authors: "JB Seol, et al.",
+    link: "https://doi.org/10.1016/j.scriptamat.2023.115402",
     image: "./image/journal/journal117.png",
-    venue: "Advanced Materials & Processes",
+    venue: "Scripta Materialia",
+    year: 2023
+  },
+  {
+    id: "j13",
+    title: "Microstructural evolution of precipitation-hardened aerospace alloys under extreme environments",
+    authors: "JB Seol, et al.",
+    link: "#",
+    image: "./image/journal/journal116.png",
+    venue: "International Journal of Plasticity",
     year: 2023
   }
 ];
 
-export const CONFERENCES: Publication[] = [];
-export const PATENTS: Patent[] = [];
+export const CONFERENCES: Publication[] = [
+  {
+    id: "c1",
+    title: "AI-driven design of high-temperature aerospace materials",
+    authors: "JB Seol",
+    venue: "International Conference on Advanced Materials",
+    year: 2024
+  },
+  {
+    id: "c2",
+    title: "Advanced microstructure analysis using Atom Probe Tomography",
+    authors: "JB Seol",
+    venue: "KIM Spring Meeting",
+    year: 2024
+  }
+];
+
+export const PATENTS: Patent[] = [
+  {
+    id: "p1",
+    title: "High-strength aerospace alloy composition and manufacturing method thereof",
+    inventors: "JB Seol",
+    number: "10-2024-XXXXXXX",
+    year: 2024
+  },
+  {
+    id: "p2",
+    title: "Deep learning based defect detection system for additive manufacturing",
+    inventors: "JB Seol, et al.",
+    number: "10-2023-XXXXXXX",
+    year: 2023
+  }
+];
 
 export const NEWS: NewsItem[] = [
   {
